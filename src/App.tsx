@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from "react-router-dom";
+import DotRing from "./components/DotRing/DotRing";
+import Navigation from "./pages/Navigation";
 
 function App() {
+
+  // Custom Cursor Handler
+  const cursorSmall = document.querySelector('.small');
+  const positionElement = (e: any) => {
+    const mouseY = e.clientY;
+    const mouseX = e.clientX;
+    //  @ts-ignore
+    cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+  }
+  window.addEventListener('mousemove', positionElement)
+
+
+  // Reveal Function
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+  
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+  
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  
+  window.addEventListener("scroll", reveal);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <DotRing />
+        <Navigation />
+      </BrowserRouter>
     </div>
   );
 }
