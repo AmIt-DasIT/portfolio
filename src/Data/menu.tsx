@@ -17,6 +17,6 @@ export const menus = [
     {
       key: 3,
       title: "Contacts",
-      path: `/contact`,
+      path: `/Contacts`,
     },
 ]

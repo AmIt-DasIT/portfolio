@@ -5,12 +5,14 @@ import Navigation from "./pages/Navigation";
 function App() {
 
   // Custom Cursor Handler
-  const cursorSmall = document.querySelector('.small');
+  const cursorSmall = document.querySelector('.small') as HTMLElement;
   const positionElement = (e: any) => {
     const mouseY = e.clientY;
     const mouseX = e.clientX;
     //  @ts-ignore
-    cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    if(cursorSmall !== null) {
+      cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+    }
   }
   window.addEventListener('mousemove', positionElement)
 

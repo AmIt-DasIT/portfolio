@@ -12,10 +12,9 @@ export default function Navigation() {
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/home' element={<Home />} />
-                <Route path='/project' element={<Project />} />
-                <Route path='/gallery' element={<Gallery />} />
-                <Route path='/contact' element={<Contact />} />
+                <Route path='/Projects' element={<Project />} />
+                <Route path='/Gallery' element={<Gallery />} />
+                <Route path='/Contacts' element={<Contact />} />
             </Routes>
         </div>
     )
