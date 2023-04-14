@@ -28,12 +28,11 @@ export default function InputBox(props: InputBoxData) {
           name={props?.name}
           placeholder={props?.placeholder}
           maxLength={props?.max}
-          // value={props?.value}
           disabled={props?.value ? true : false}
           onInput={(e: any) => {
             return (props.type === 'number' ? e.target.value = Math.max(0, parseInt(e.target.value)).toString().slice(0, props?.numLength ? props?.numLength : 10) : e.target.value)
           }}
-          className={`w-full bg-transparent rounded border  text-sm outline-none t px-2 leading-8 ${props.error ? 'border-[#FF0000]' : 'border-violet-700'} ${props?.className}`}
+          className={`w-full bg-transparent rounded border  text-sm outline-none t px-2 leading-10 ${props.error ? 'border-[#FF0000]' : 'border-violet-700'} ${props?.className}`}
         />
         <div className="text-[#FF0000] text-xs">
           {/* @ts-ignore */}

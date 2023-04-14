@@ -4,15 +4,10 @@
   left: 50%;
   width: 25px;
   height: 25px;
-  /* backdrop-filter: blur(0px) ; */
   border-radius: 100%;
   border: 1px solid #ffffff55;
   z-index: 1040;
   pointer-events: none;
   backdrop-filter: invert(100%);
-  transition: 0.1s ease;
 }
 
-.dot.hovered {
-  display: none;
-}
