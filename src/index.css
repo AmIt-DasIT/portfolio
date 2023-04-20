@@ -101,7 +101,7 @@ input:-webkit-autofill:active {
 .parallax-one {
   width: 100%;
 /*   background-image: url('https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg'); */
-  background-image: url('./assets/images/desk_photo.jpg');
+  background-image: url('./assets/images/desk_photo.jpeg');
   height: 100vh;
   background-position: top center;
   background-size: cover;
