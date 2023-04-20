@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   font-family: Inter;
@@ -9,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #f6f5f5;
   user-select: none;
+  scroll-behavior: smooth;
   /* cursor: none; */
 }
 

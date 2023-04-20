@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Arrow } from '../../assets'
 import WorkExperience from '../../components/WorkExperience/WorkExperience';
 import './Home.css'
@@ -18,7 +19,7 @@ export default function Home() {
               <div className=' text-end topslide'>I am good in React Js & CSS3</div>
             </div>
             <a href='#about' className='absolute bottom-10 sm:bottom-24  sm:left-[50%]'>
-              <i className="fa fa-sharp fa-solid fa-chevron-down  fa-lg animate-bounce text-[yellowgreen] hover:text-orange-500 "></i>
+              <i className="fa fa-sharp fa-solid fa-chevron-down  fa-lg animate-bounce text-[yellowgreen] hover:text-orange-500 scroll-smooth"></i>
             </a>
           </div>
           <div className='w-full flex items-end '>
