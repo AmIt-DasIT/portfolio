@@ -11,3 +11,14 @@
   backdrop-filter: invert(100%);
 }
 
+.dot_hover {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: rgba(127, 255, 212, 0.5);
+  z-index: 1040;
+  pointer-events: none;
+}

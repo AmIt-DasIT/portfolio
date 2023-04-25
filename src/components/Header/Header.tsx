@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { menus } from '../../Data/menu';
-import { alogo, burger } from '../../assets';
+import { burger } from '../../assets';
 import './Header.css'
 
 export default function Header() {
@@ -29,6 +29,12 @@ export default function Header() {
         }
     }
 
+    document.addEventListener('mousemove', (e) => {
+        const dot = document.querySelector('.dot');
+        // @ts-ignore
+        e.target?.id === 'nav' ? dot?.classList.add('dot_hover') : dot?.classList.remove('dot_hover');
+    });
+
     return (
         <div className={`w-full flex sm:justify-evenly items-center absolute h-20 z-[1035] cursor-none header`} id='header'>
             <div className='w-[30%]'>
@@ -39,7 +45,7 @@ export default function Header() {
                     return (
                         <div className={`tracking-wider ${(state === data.title) && 'text-white'} duration-500 ease-in-out pt-[0.8rem] h-12 px-3 heading`}
                             onClick={() => (navigate(data.path), setState(data.title))} key={data.title}>
-                            <div>{data.title}</div>
+                            <div id='nav'>{data.title}</div>
                             <div className={`${(state === data.title) ? classN : 'underBack'}`}></div>
                         </div>
                     )

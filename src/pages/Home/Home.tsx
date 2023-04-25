@@ -55,9 +55,9 @@ export default function Home() {
         </div>
         <div className='pb-6'>iamitcuit20@gmail.com</div>
         <div className='flex gap-6'>
-          <i className="fa fa-brands fa-linkedin"></i>
-          <i className="fa fa-brands fa-google"></i>
-          <i className="fa fa-brands fa-facebook"></i>
+          <i className="fa fa-brands fa-linkedin cursor-pointer"></i>
+          <i className="fa fa-brands fa-google cursor-pointer"></i>
+          <i className="fa fa-brands fa-facebook cursor-pointer"></i>
         </div>
       </div>
       <div className='h-10'></div>

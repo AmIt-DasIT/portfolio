@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Project() {
   return (
-    <div>Project</div>
+    <div className='min-h-screen'>Project</div>
   )
 }
