@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
       <div className=" rounded-xl sm:mx-[30rem] min-h-screen">
-        <p className="text-center py-20 text-4xl font-[Preahvihear]">Contact</p>
+        <p className="text-center py-20 text-4xl">Contact</p>
         <div className="border-[#] rounded-xl mx-6">
           <Formik
             initialValues={initialValues}

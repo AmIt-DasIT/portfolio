@@ -12,7 +12,7 @@ export default function Home() {
             <div className='font-[Raleway] text-base'>
               <div className='absolute left-[60%] top-[15%] whitespace-nowrap hidden sm:flex'>
                 <img src={Arrow} className='absolute h-[80px] w-[80px] -top-2 -left-[4.3rem] translate-z-2' alt='' />
-                Hello! I am <span className='text-[#c155ff]'> &nbsp;Amit Das</span>
+                {/* Hello! I am <span className='text-[#c155ff]'> &nbsp;Amit Das</span> */}
               </div>
               <div className='underline'>A developer who</div>
               <div className='text-5xl sm:text-7xl font-[Satisfy] py-2 rightslide' id='effect'>Judges a book<br /> by its cover...</div>
@@ -36,9 +36,9 @@ export default function Home() {
           My self-confidence, patience and adaptability are my greatest strengths.
         </div>
       </div>
-      <div className='col-span-2 w-full lg:px-[15rem] xl:px-[20.2rem] py-[10rem] reveal'>
-        <span className='text-4xl text-start px-4 sm:p-0 '>Work Experience</span>
-        <div style={{ background: 'radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%)' }} className='absolute  sm:w-[485px] sm:h-[470px] left-8 top-[25%] sm:left-[35%] '></div>
+      <div className='col-span-2 w-full lg:px-[15rem] xl:px-[20.2rem] py-[10rem] relative'>
+        <div className='text-4xl text-start px-4 sm:p-0 reveal_top'>Work Experience</div>
+        <div style={{ background: 'radial-gradient(50% 50% at 50% 50%, #763CAC 0%, rgba(50, 15, 133, 0) 100%)' }} className='absolute sm:w-[485px] sm:h-[470px] left-8 top-[25%] sm:left-[35%] '></div>
         <WorkExperience />
       </div>
       {/* <div className='relative sm:col-span-2 w-full lg:px-[15rem] xl:px-[20.2rem] text-center reveal'>
@@ -47,8 +47,8 @@ export default function Home() {
         </div>
         <Skills />
       </div> */}
-      <div className='col-span-2 w-full lg:px-[15rem] xl:px-[20.2rem]  px-4 sm:px-0 font-[Raleway]'>
-        <p className='text-4xl rightslide'>Contact</p>
+      <div className='col-span-2 w-full lg:px-[15rem] xl:px-[20.2rem]  px-4 sm:px-0 font-[Raleway] reveal_top'>
+        <div className='text-4xl rightslide '>Contact</div>
         <div className='py-10 text-lg'>
           I'm currently looking to join a cross-functional team that values improving people's lives<br />
           through accessible design. or have a project in mind? Let's connect.

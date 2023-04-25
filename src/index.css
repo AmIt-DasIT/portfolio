@@ -100,11 +100,55 @@ input:-webkit-autofill:active {
 
 .parallax-one {
   width: 100%;
-  background-image: url('https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg');
+  background-image: url('../src/assets/images/portfolio.jpeg');
   height: 100vh;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   backdrop-filter: blur(13px);
+}
+
+.text_left {
+  animation: text_left_arise 1s ease;
+}
+
+@keyframes text_left_arise {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.text_right {
+  animation: text_right_arise 1s ease;
+}
+
+@keyframes text_right_arise {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.text_top {
+  animation: text_top_arise 1s ease;
+}
+
+@keyframes text_top_arise {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

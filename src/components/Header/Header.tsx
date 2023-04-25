@@ -15,13 +15,14 @@ export default function Header() {
             setShow(false);
         }
     };
-    const classN = 'h-1 rounded-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-700 ease-in-out '
+    const classN = 'w-[80%] h-1 rounded-md bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-700 ease-in-out underAnim'
 
     window.onscroll = (e) => {
         var header = document.getElementById("header") as HTMLElement;
         if (window.innerHeight < window.scrollY) {
             header.style.position = "fixed";
             header.style.backgroundColor = "#11071fe6";
+            header.style.transition = '1s'
         } else {
             header.style.position = "absolute";
             header.style.backgroundColor = "transparent";
@@ -36,10 +37,10 @@ export default function Header() {
             <div className='justify-between hidden sm:flex items-center w-[20%] font-semibold text-gray-500 text-sm my-4 gap-3'>
                 {menus.map((data) => {
                     return (
-                        <div className={`tracking-widest w-14 ${(state === data.title) && 'text-white'} duration-500 ease-in-out pt-1`}
-                            onClick={() => (navigate(data.path), setState(data.title))} key={data.title} >
+                        <div className={`tracking-wider ${(state === data.title) && 'text-white'} duration-500 ease-in-out pt-[0.8rem] h-12 px-3 heading`}
+                            onClick={() => (navigate(data.path), setState(data.title))} key={data.title}>
                             <div>{data.title}</div>
-                            <div className={`${classN} invisible hover:visible`}></div>
+                            <div className={`${(state === data.title) ? classN : 'underBack'}`}></div>
                         </div>
                     )
                 })}
