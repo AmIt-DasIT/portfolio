@@ -102,6 +102,7 @@ input:-webkit-autofill:active {
   width: 100%;
   background-image: url('../src/assets/images/portfolio.jpeg');
   height: 100vh;
+/*   background-image: url('https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg'); */
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
