@@ -1,12 +1,29 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Arrow } from '../../assets'
 import WorkExperience from '../../components/WorkExperience/WorkExperience';
 import './Home.css'
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
+ import { initializeApp } from "firebase/app";
+import { firebaseConfig } from '../../Data/firebase';
+
 
 export default function Home() {
+  const app = initializeApp(firebaseConfig);
+  const [image, setImage] = useState('');
+  const storage = getStorage();
+  useEffect(() => {
+    const imagesRef = ref(storage, '/images/portfolio.jpeg');
+    getDownloadURL(imagesRef)
+      .then((url) => {
+        setImage(url)
+      })
+  }, [])
+
+    console.log(image)
+
   return (
     <div className=''>
-      <div className="parallax-one">
+      <div className="parallax-one" style={{ backgroundImage: `url(${image})`}}>
         <div className='grid sm:grid-cols-2 w-full pt-10 text-white justify-items-center sm:justify-between '>
           <div className=' h-[73vh] flex items-end sm:items-center justify-center sm:justify-end sm:pr-28 w-full'>
             <div className='font-[Raleway] text-base'>
